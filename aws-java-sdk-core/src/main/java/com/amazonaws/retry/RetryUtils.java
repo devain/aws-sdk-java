@@ -67,6 +67,7 @@ public class RetryUtils {
 
         String errorCode = ase.getErrorCode();
         return "RequestTimeTooSkewed".equals(errorCode)
+                || "AuthFailure".equals(errorCode);
                 || "RequestExpired".equals(errorCode)
                 || "InvalidSignatureException".equals(errorCode)
                 || "SignatureDoesNotMatch".equals(errorCode);
